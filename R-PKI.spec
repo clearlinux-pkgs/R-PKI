@@ -4,18 +4,18 @@
 #
 Name     : R-PKI
 Version  : 0.1.5.1
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/PKI_0.1-5.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/PKI_0.1-5.1.tar.gz
 Summary  : Public Key Infrastucture for R Based on the X.509 Standard
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
-Requires: R-PKI-lib
+Requires: R-PKI-lib = %{version}-%{release}
 Requires: R-base64enc
 Requires: R-gmp
 BuildRequires : R-base64enc
 BuildRequires : R-gmp
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 BuildRequires : openssl-dev
 
 %description
@@ -37,11 +37,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521241611
+export SOURCE_DATE_EPOCH=1542430843
 
 %install
+export SOURCE_DATE_EPOCH=1542430843
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521241611
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
