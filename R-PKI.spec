@@ -4,15 +4,13 @@
 #
 Name     : R-PKI
 Version  : 0.1.5.1
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/PKI_0.1-5.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/PKI_0.1-5.1.tar.gz
 Summary  : Public Key Infrastucture for R Based on the X.509 Standard
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
 Requires: R-PKI-lib = %{version}-%{release}
-Requires: R-base64enc
-Requires: R-gmp
 BuildRequires : R-base64enc
 BuildRequires : R-gmp
 BuildRequires : buildreq-R
@@ -37,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542430843
+export SOURCE_DATE_EPOCH=1552875183
 
 %install
-export SOURCE_DATE_EPOCH=1542430843
+export SOURCE_DATE_EPOCH=1552875183
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -76,8 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library PKI|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  PKI || :
 
 
 %files
@@ -105,10 +102,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/PKI/help/paths.rds
 /usr/lib64/R/library/PKI/html/00Index.html
 /usr/lib64/R/library/PKI/html/R.css
-/usr/lib64/R/library/PKI/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/PKI/libs/PKI.so
-/usr/lib64/R/library/PKI/libs/PKI.so.avx2
-/usr/lib64/R/library/PKI/libs/PKI.so.avx512
