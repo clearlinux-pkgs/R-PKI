@@ -4,7 +4,7 @@
 #
 Name     : R-PKI
 Version  : 0.1.7
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/PKI_0.1-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/PKI_0.1-7.tar.gz
 Summary  : Public Key Infrastucture for R Based on the X.509 Standard
