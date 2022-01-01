@@ -4,7 +4,7 @@
 #
 Name     : R-PKI
 Version  : 0.1.9
-Release  : 41
+Release  : 42
 URL      : https://cran.r-project.org/src/contrib/PKI_0.1-9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/PKI_0.1-9.tar.gz
 Summary  : Public Key Infrastucture for R Based on the X.509 Standard
@@ -37,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635956336
+export SOURCE_DATE_EPOCH=1641075182
 
 %install
-export SOURCE_DATE_EPOCH=1635956336
+export SOURCE_DATE_EPOCH=1641075182
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
