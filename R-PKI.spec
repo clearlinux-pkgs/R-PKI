@@ -7,7 +7,7 @@
 #
 Name     : R-PKI
 Version  : 0.1.14
-Release  : 57
+Release  : 58
 URL      : https://cran.r-project.org/src/contrib/PKI_0.1-14.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/PKI_0.1-14.tar.gz
 Summary  : Public Key Infrastucture for R Based on the X.509 Standard
